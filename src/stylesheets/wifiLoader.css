@@ -1,0 +1,145 @@
+.wifi-loader-wrapper {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  background: rgb(20, 197, 228);
+  border-radius: 50%;
+  margin: auto;
+}
+
+.wifi-loader {
+  position: absolute;
+  top: -90px;
+  left: -90px;
+  width: 150px;
+  height: 150px;
+  border: 30px solid transparent;
+  border-top: 30px solid #292a33;
+  border-bottom: 30px solid #292a33;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  z-index: -1;
+  transform: rotateZ(90deg);
+  animation: wifilen1 3s infinite;
+}
+
+.wifi-loader::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  left: -80px;
+  width: 250px;
+  height: 250px;
+  border: 30px solid transparent;
+  border-top: 30px solid #292a33;
+  border-bottom: 30px solid #292a33;
+  border-radius: 50%;
+  animation: wifilen2 3s infinite;
+}
+
+.wifi-loader::after {
+  content: '';
+  position: absolute;
+  top: -128px;
+  left: -128px;
+  width: 350px;
+  height: 350px;
+  border: 30px solid transparent;
+  border-top: 30px solid #292a33;
+  border-bottom: 30px solid #292a33;
+  border-radius: 50%;
+  animation: wifilen3 3s infinite;
+}
+
+@keyframes wifilen1 {
+  39% {
+    border-top-color: #292a33;
+    border-bottom-color: #292a33;
+  }
+  40% {
+    border-top-color: #5d5e65;
+    border-bottom-color: #5d5e65;
+  }
+  100% {
+    border-top-color: #00ccff;
+    border-bottom-color: #00ccff;
+  }
+}
+
+@keyframes wifilen2 {
+  59% {
+    border-top-color: #292a33;
+    border-bottom-color: #292a33;
+  }
+  60% {
+    border-top-color: #5d5e65;
+    border-bottom-color: #5d5e65;
+  }
+  100% {
+    border-top-color: #00ccff;
+    border-bottom-color: #00ccff;
+  }
+}
+
+@keyframes wifilen3 {
+  79% {
+    border-top-color: #292a33;
+    border-bottom-color: #292a33;
+  }
+  80% {
+    border-top-color: #5d5e65;
+    border-bottom-color: #5d5e65;
+  }
+  100% {
+    border-top-color: #00ccff;
+    border-bottom-color: #00ccff;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .wifi-loader-wrapper {
+    width: 15px;
+    height: 15px;
+  }
+  .wifi-loader {
+    top: -38px;
+    left: -38px;
+    width: 60px;
+    height: 60px;
+    border: 15px solid transparent;
+    border-top: 15px solid #292a33;
+    border-bottom: 15px solid #292a33;
+    /* border-top: 15px;
+    border-bottom: 15px; */
+  }
+  .wifi-loader::before {
+    top: -70px;
+    left: -65px;
+    width: 160px;
+    height: 160px;
+
+    border: 15px solid transparent;
+    border-top: 15px solid #292a33;
+    border-bottom: 15px solid #292a33;
+  }
+  .wifi-loader::after {
+    top: -120px;
+    left: -115px;
+    width: 260px;
+    height: 260px;
+
+    border: 15px solid transparent;
+    border-top: 15px solid #292a33;
+    border-bottom: 15px solid #292a33;
+  }
+}
